@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://SecondPass.gdshader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/backgroundColor = Vector3( 0.7, 0.7, 0.7 )
+shader_param/unlitColor = Vector3( 0.8, 0, 0 )
+shader_param/litColor = Vector3( 1, 0.2, 0.2 )

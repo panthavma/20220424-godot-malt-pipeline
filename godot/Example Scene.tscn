@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Pipeline.gd" type="Script" id=1]
+[ext_resource path="res://FirstPass.gdshader" type="Shader" id=2]
+[ext_resource path="res://SecondPassMaterial.tres" type="Material" id=3]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+
+[node name="Example Scene" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.0053 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.70061, 0.30967, 0.642845, -0.713544, 0.304057, 0.631193, 0, -0.900918, 0.433989, 0, 0, 0 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+material = ExtResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
